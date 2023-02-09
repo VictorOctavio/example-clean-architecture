@@ -1,0 +1,126 @@
+.login{
+   
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(315deg, $bg-2 0%, $bg-1 71%, $bg-1 100%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   &__contain{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__wrapper {
+      position: relative;
+      height: 80%;
+      background-color: rgba(255, 255, 255, 0.048);
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr 1fr;
+      font-size: 16px;
+      border-radius: 15px 100px 15px 100px;
+
+   
+      &__form{
+         height: 100%;
+         width: 50%;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         gap: 10px;
+
+         @media (max-width: 600px) {
+            width: 70%;
+         }
+
+         &__text{
+            font-size: 1.6em;
+            color: $bg-5;
+            margin-bottom: .8em;
+            background-color: rgba(255, 255, 255, 0.13);
+            padding: 10px;
+            border-radius: 5px 20px 5px 20px;
+         }
+
+         &__containInput{
+            
+            display: flex;
+            flex-direction: column;
+            gap: .2em;
+
+            &__label{
+               align-self: flex-start;
+               font-size: .8em;
+               color: $bg-5;
+            }
+
+            &__inputForm{
+               font-size: .9em;
+               padding: .5em .3em;
+            }
+         }
+
+         &__btn{
+            margin-top: 1em;
+            @include mButtom(white, $bg-3)
+         }
+
+         &__span{
+            cursor: pointer;
+            font-size: .8em;
+            color: $bg-5;
+            opacity: .6;
+            margin-top: 1em;
+            text-align: center;
+            transition: .5s;
+            
+            &:hover{
+               opacity: 1;
+            }
+         }
+
+      }
+
+
+      &__help{
+         width: 50%;
+         background-color: rgba(255, 255, 255, 0.13);
+         padding: 10px;
+         border-radius: 5px 20px 5px 20px;
+         text-align: center;
+
+         @media (max-width: 600px) {
+            width: 70%;
+         }
+
+         &__btn{
+            cursor: pointer;
+            font-size: .8em;
+            color: $bg-5;
+         }
+      }
+
+      &__ilustration{
+         position: absolute;
+         width: 180px;
+         top: -70px;
+         left: 0px;
+         transform: rotate( -15deg);
+
+         @media (max-height: 1200px) {
+            width: 130px;
+         }
+
+         @media (max-height: 800px) {
+            display: none;
+         }
+      }
+   }
+}

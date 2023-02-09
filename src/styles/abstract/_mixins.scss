@@ -1,0 +1,19 @@
+@mixin mButtom($bg, $font){
+
+   background-color: $bg;
+   padding: 10px;
+   font-weight: 600;
+   color: $font;
+   transition: .3s ease-in-out;
+   cursor: pointer;
+
+   &:disabled{
+      opacity: .5;
+      cursor: default;
+   }
+
+   &:hover{
+      background-color: $font;
+      color: $bg;
+   }
+}
